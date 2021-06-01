@@ -22,29 +22,206 @@ Example:
    - Return: character at specific index in the string (string data type)
    - Example:
      ```js
-     let name = 'Arya Stark';
+     let name = "Arya Stark";
      name.charAt(2); //"y"
-     let sentance = 'A quick brown fox jumped over a lazy dog';
+     let sentance = "A quick brown fox jumped over a lazy dog";
      sentance(4); // "i"
-     let houseName = 'Starks';
+     let houseName = "Starks";
      houseName.charAt(0); // "S"
      ```
    - `charAt` accepts a index (number data type) and return the character on that index in the string.
 
 2. `toUpperCase`
+
+- Parameter: don't need index
+- Return: charater in upper case (string data type)
+  -Example:
+
+```js
+let name = "ritik dhingra";
+name.touppercase(); // "RITIK DHINGRA"
+```
+
 3. `toLowerCase`
+
+- Parameter: don't need index
+- Return: charater in lower case (string data type)
+  -Example:
+
+```js
+let name = "RITIK DHINGRA";
+name.tolowercase(); // "ritik dhingra"
+```
+
 4. `trim`
+
+- Parametr: don't need parameter
+  -Retrun: remove extra space
+- Example:
+
+```js
+let hello = "     hello world   ";
+hello.trim(); // "hello world"
+```
+
 5. `trimEnd`
+
+- Parametr: don't need parameter
+  -Retrun: remove extra space from start
+- Example:
+
+```js
+let hello = "     hello world   ";
+hello.trim(); // "hello world   "
+```
+
 6. `trimStart`
+
+- Parametr: don't need parameter
+  -Retrun: remove extra space from end
+- Example:
+
+```js
+let hello = "     hello world    ";
+hello.trim(); // "    hello world"
+```
+
 7. `concat`
+
+- Parametr: its accept the parameter
+  -Retrun: return the a string with concat
+- Example:
+
+```js
+let name = "Ritik";
+let surname = "dhinhra";
+name.concat(" ", surname); // ritik dhingra
+```
+
 8. `endsWith`
+
+- Parametr: its accept the parameter and we can pass any value
+  -Retrun: true or false
+- Example:
+
+```js
+let name = "Ritik";
+name.endwith(ik); // true
+name.endwith(jhg); // false
+```
+
 9. `includes`
+
+- Parametr: its accept the parameter or accept the value
+  -Retrun: return the true or false weither the value is present on that string or not
+- Example:
+
+```js
+let name = "Ritik";
+name.includes("R"); // true
+```
+
 10. `indexOf`
+
+- Parametr: its accept the parameter
+  -Retrun: its return the specific value
+- Example:
+
+```js
+let name = "Ritik is a good boy ";
+name.indexof(good); // 10
+name.indexof(xyz); // -1
+
+("if parameter dosen't exist its showing -1.");
+```
+
 11. `lastIndexOf`
-12. `padEnd`
-13. `padStart`
-14. `repeat`
-15. `replace`
-16. `slice`
-17. `split`
-18. `substring`
+
+- Parametr: its accept the parameter
+  -Retrun: its return the specific value but the last value
+- Example:
+
+```js
+let name = "Ritik is a good boyi ";
+name.lastindexof(i); // 2
+name.lastindexof(i); // 20
+```
+
+("if parameter dosen't exist its showing -1.");
+12`padEnd`;
+
+- Parametr: its accept the parameter
+  -Retrun: its return the padding in end
+- Example:
+
+```js
+let name = "Ritik ";
+name.padEnd("20", "."); // ritik...............
+```
+
+13`padStart`;
+
+- Parametr: its accept the parameter
+  -Retrun: its return the padding in start
+- Example:
+
+```js
+let name = "Ritik ";
+name.padStart("20", "."); // ...............ritik
+```
+
+14`repeat`;
+
+- Parametr: its accept the parameter
+  -Retrun: its return repeat word
+- Example:
+
+```js
+let name = "Ritik ";
+name.repeat(3); // ritikritikritik
+```
+
+15`replace`;
+Parametr: its accept two parameter
+-Retrun: its return replace word
+
+- Example:
+
+```js
+let name = "Ritik ";
+name.replace("ritik", "dhingra"0); // dhingra
+```
+
+16`slice`;
+-Parametr: its accept two parameter but the second is optional
+-Retrun: its return string
+
+- Example:
+
+```js
+let name = "Ritik is the good";
+name.slice("o", "11"); //  ritik is goo
+```
+
+17`split`;
+-Parametr: its accept two parameter but the second is optional
+-Retrun: its return string
+
+- Example:
+
+```js
+let name = "Ritik is the good";
+name.slice(" "); //  "ritik" "is" "the" "good"
+```
+
+18`substring`;
+-Parametr: its accept two parameter but the second is optional
+-Retrun: its return string
+
+- Example:
+
+```js
+let name = "Ritik is the good";
+name.substring("o", "11"); //  ritik is goo
+name.substring("11", "0"); //   ritik is goo
+```
