@@ -1,21 +1,22 @@
-let fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+let fruits = ["Banana", "Orange", "Apple", "Mango"];
 
 // Add a new element ('Papaya') into fruits array at end
+console.log(fruits.push("papya"));
 
 // Remove the last element from fruits array
-
+console.log(fruits.pop());
 // Log the current length of fruits array
-
+fruits.length;
 // Remove the first element from fruits and log the value of fruits (use delete arr[0])
-
+delete fruits[0];
 // Log the element on index 0 and 1
-
+fruits.slice(0, 3);
 // If the element at 0 index is undefined and index 1 is 'Banana' shift all the values to one lower index (use shift method)
-
+fruits.shift(0);
 // Add a new element to the start ('Guava') and shift the index of all other to one higher value
-
+fruits.unshift("Guava");
 // Add a new element to the start ('Dragon Fruit') and shift the index of all other to one higher value
-
+fruits.unshift("dragon Fruit");
 // Log true or false based on the value at index 0 and 1 is 'Dragon Fruit' and 'Guava' or not
 
 // Update the value of index 1 to `Pears`
@@ -31,7 +32,7 @@ let fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
 // Log the name of all fruit in console
 
 // Convert each fruit name to lowercase and log it
-
+fruits.lowerCase;
 // Convert all fruits name into lowercase and store in new array named lowercaseFruits
 
 // Convert all fruits name into uppercase and store in new array named uppercaseFruits
@@ -41,10 +42,10 @@ let numbersTwo = [1, 2, [3, 4, [5, 6]]];
 let numbersThree = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
 
 // Convert the numbers array to one level element. Remove sub-arrays to individual elements and log them
-
+numbers.flat(Infinity);
 // Convert the numbersTwo array to one level element. Remove all sub-arrays to individual elements and log them.
 // (for multiple level flat accepts argument by default it's 1 `array.flat(2)`)
-
+numbers.flat(2);
 // Convert the numbersThree array to one level element.
 // Remove all sub-arrays to individual elements, log them and update the value of numbersThree to the new flat array.
 
