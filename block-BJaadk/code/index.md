@@ -10,8 +10,8 @@ function double(num) {
 }
 let doubleNum = numbers.forEach(double);
 ```
-![](./img/main.png)
 
+![](./img/main.png)
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -71,7 +71,7 @@ let oddNumbers = numbers.filter(isOdd);
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
-function test(num) {
+function test(nu) {
   return num;
 }
 let filteredNumbers = numbers.filter(test);
