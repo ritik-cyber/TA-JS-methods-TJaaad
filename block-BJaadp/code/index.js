@@ -1,46 +1,77 @@
 let persons = [
-  { name: 'John', grade: 8, sex: 'M' },
-  { name: 'Sarah', grade: 12, sex: 'F' },
-  { name: 'Bob', grade: 16, sex: 'M' },
-  { name: 'Johnny', grade: 2, sex: 'M' },
-  { name: 'Ethan', grade: 4, sex: 'M' },
-  { name: 'Paula', grade: 18, sex: 'F' },
-  { name: 'Donald', grade: 5, sex: 'M' },
-  { name: 'Jennifer', grade: 13, sex: 'F' },
-  { name: 'Courtney', grade: 15, sex: 'F' },
-  { name: 'Jane', grade: 9, sex: 'F' },
-  { name: 'John', grade: 17, sex: 'M' },
-  { name: 'Arya', grade: 14, sex: 'F' },
+  { name: "John", grade: 8, sex: "M" },
+  { name: "Sarah", grade: 12, sex: "F" },
+  { name: "Bob", grade: 16, sex: "M" },
+  { name: "Johnny", grade: 2, sex: "M" },
+  { name: "Ethan", grade: 4, sex: "M" },
+  { name: "Paula", grade: 18, sex: "F" },
+  { name: "Donald", grade: 5, sex: "M" },
+  { name: "Jennifer", grade: 13, sex: "F" },
+  { name: "Courtney", grade: 15, sex: "F" },
+  { name: "Jane", grade: 9, sex: "F" },
+  { name: "John", grade: 17, sex: "M" },
+  { name: "Arya", grade: 14, sex: "F" },
 ];
 
 // NOTE: Use reduce method whereever you can to solve this exercise:
 
 // Find the average grade
 
+let totalGrade =
+  persons.map((persons) => persons.grade).reduce((acc, cv) => acc + cv) /
+  persons.length;
+console.log(totalGrade);
+
 // Find the average grade of male
+
+let totalMaleGrade = persons
+  .filter((persons) => persons.sex === "M")
+  .reduce((acc, cv) => {
+    acc = acc + cv.grade;
+    return acc;
+  }, 0);
+console.log(totalMaleGrade);
 
 // Find the average grade of female
 
 // Find the highest grade
+let heighstGrade = [...persons].sort((a, b) => b.grade - a.grade);
+console.log(heighstGrade[0]);
 
 // Find the highest grade in male
 
-// Find the highest grade in female
+let filteredMale = persons.filter((persons) => persons.sex === "M");
 
+let heighestMale = [...filteredMale].sort((a, b) => b.grade - a.grade);
+let heighstMalegrade = heighestMale[0];
+console.log(heighstMalegrade);
+
+// Find the highest grade in female
+let filteredFemale = persons.filter((persons) => persons.sex === "F");
+
+let heighestFemale = [...filteredFemale].sort((a, b) => b.grade - a.grade);
+let heighstFemalegrade = heighestFemale[0];
+console.log(heighstFemalegrade);
 // Find the highest grade for people whose name starts with 'J' or 'P'
+let heighstPeopleJorP = persons.filter(
+  (persons) => persons.name.startsWith("J") || persons.name.startsWith("P")
+);
+let nameWith = heighstPeopleJorP.map((persons) => persons.grade);
+let finalName = [...nameWith].sort((a, b) => a - b).pop();
+console.log(finalName);
 
 const fruitBasket = [
-  'banana',
-  'cherry',
-  'orange',
-  'apple',
-  'cherry',
-  'orange',
-  'apple',
-  'banana',
-  'cherry',
-  'orange',
-  'fig',
+  "banana",
+  "cherry",
+  "orange",
+  "apple",
+  "cherry",
+  "orange",
+  "apple",
+  "banana",
+  "cherry",
+  "orange",
+  "fig",
 ];
 
 /* 
@@ -48,10 +79,20 @@ const fruitBasket = [
 Use the fruitBasket array to create an object where key will be the fruit and value will be the number of times
 that fruit has appeared in the array. Store it in new variable fruitsObj
 
+
 Output: 
 {banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1}
 */
 
+let fruitsObj = fruitBasket.reduce((acc, cv) => {
+  if (!acc[cv]) {
+    acc[cv] = 1;
+  } else {
+    acc[cv] += 1;
+  }
+  return acc;
+}, {});
+console.log(fruitsObj);
 /* 
 
 Use the fruitBasket array to create an array of array. Each array will contain two values name of fruit and number of times
@@ -71,6 +112,10 @@ const data = [
 
 // Using reduce flat data array
 
+let newData = data.reduce((acc, cv) => {
+  return acc.flat(cv.data);
+});
+console.log(newData);
 const dataTwo = [
   [1, 2, 3],
   [4, 5, 6],
